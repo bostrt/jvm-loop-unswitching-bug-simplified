@@ -4,7 +4,14 @@ All credit for this particular reproducer goes to [rholder](https://github.com/r
 
 ## How to use
 
+If you are *trying* to reproduce the issue then make sure you have an old Java version. Below, you can see I'm using 1.7.0_55 which is older than the verion where the bug was fixed (in 1.7.0_60+ or 1.8+).
+
 ```
+# java -version
+java version "1.7.0_55"
+OpenJDK Runtime Environment (rhel-2.4.7.2.el7_0-x86_64 u55-b13)
+OpenJDK 64-Bit Server VM (build 24.51-b03, mixed mode)
+
 # javac -cp ./httpclient-4.2.2.jar:./commons-lang-2.6.jar:./httpcore-4.2.2.jar JvmBug.java
 # java -cp .:./httpclient-4.2.2.jar:./commons-lang-2.6.jar:./httpcore-4.2.2.jar JvmBug
 ```
